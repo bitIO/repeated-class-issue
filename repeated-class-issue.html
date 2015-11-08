@@ -1,0 +1,28 @@
+<head>
+  <title>repeated-class-issue</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+
+  <div class="ui two column computer one column mobile grid container">
+    this div container has two column classes
+  <button class="ui button">Show second</button>
+  {{#if showSecond }}
+  {{> hello2 }}
+  {{/if}}
+
+</div>
+
+</template>
+
+<template name="hello2">
+<div class="ui two column computer one column mobile grid container">
+this div container should have two column classes, but just have one
+</div>
+</template>
